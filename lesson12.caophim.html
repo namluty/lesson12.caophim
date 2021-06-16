@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui</title>
+</head>
+<body onload="love()" style="text-align: center;">
+<form>
+    <h1> MỜI BẠN VIẾT VÀO ĐÂY</h1>
+    <label>
+        <textarea cols="100px" rows="15px" id="txt"></textarea>
+    </label>
+</form>
+<script>
+    let luty = [];
+    let data = '';
+    luty[1]='E';
+    luty[2]='M';
+    luty[3]=' ';
+    luty[4]='Y';
+    luty[5]='Ê';
+    luty[6]='U';
+    luty[7]=' ';
+    luty[8]='A';
+    luty[9]='N';
+    luty[10]='H';
+    luty[11]=' ';
+    luty[12]='N';
+    luty[13]='A';
+    luty[14]='M';
+    luty[15]=' ';
+    luty[16]='L';
+    luty[17]='U';
+    luty[18]='T';
+    luty[19]='Y';
+    luty[20]=' ';
+    luty[21]='F';
+    luty[22]='O';
+    luty[23]='R';
+    luty[24]='E';
+    luty[25]='V';
+    luty[26]='E';
+    luty[27]='R';
+    luty[28]='!';
+    luty[29]='!';
+    luty[30]='!';
+    luty[30]=' ';
+    function love (){
+        let text = document.getElementById('txt').value;
+        for(let i = 1; i <= text.length; i++)
+        {
+            data = data + luty[i];
+            if (i === 31)
+            {
+                data = "";
+            }
+        }
+        document.getElementById("txt").value = data;
+        data = "";
+        setTimeout("love()", 1);
+    }
+</script>
+</body>
+</html>
